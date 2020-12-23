@@ -57,7 +57,7 @@ The data set contains 2930 observations, and a large number of explanatory varia
 
 ```R
 # The csv file should be imported into rstudio:
-AmesHousing <- read.csv("https://raw.githubusercontent.com/kwaldenphd/ggplot-intro/main/main/AmesHousing.csv")
+AmesHousing <- read.csv("https://raw.githubusercontent.com/kwaldenphd/ggplot-intro/main/AmesHousing.csv")
 # str(AmesHousing)
 ```
 
