@@ -7,14 +7,27 @@ This tutorial is licensed under a <a href="http://creativecommons.org/licenses/b
 
 It is often necessary to create graphs to effectively communicate key patterns within a dataset. While many software packages allow the user to make basic plots, it can be challenging to create plots that are customized to address a specific idea. While there are numerous ways to create graphs, this tutorial will focus on the R package ggplot2, created by Hadley Wickham.
 
-
 ## Acknowledgements
 
 This lab procedure is adapted from and based on Ryan Miller's ["Creating Graphs with ggplot2"](https://remiller1450.github.io/s230f19/ggplot.html) (Fall 2019, Intro to Data Science STA 230 course, Grinnell College).
 
 # Table of Contents
 
-# ggplot2 and grammar of graphics
+- [`ggplot2` and the Grammar of Graphics](#ggplot2-and-the-grammar-of-graphics)
+
+# `ggplot2` and the Grammar of Graphics
+  * [What is `ggplot2`?](#what-is-ggplot2)
+  * [What is the "Grammar of Graphics"?](#what-is-the-grammar-of-graphics)
+  * [Basic `ggplot2` Syntax](#basic-ggplot2-syntax)
+- [Data and Environment Setup](#data-and-environment-setup)
+- [Basic Structure of `ggplot2` Functions](#basic-structure-of-ggplot2-functions)
+- [Customizing Graphics Using `ggplot2`](#customizing-graphics-using-ggplot2)
+- [Additional Considerations](#additional-considerations)
+  * [Data Types](#data-types)
+  * [Customizing Graphs](#customizing-graphs)
+- [Additional Resources](#additional-resources)
+- [Additional Questions](#additional-questions)
+- [Lab Notebook Questions](#lab-notebook-questions)
 
 ## What is `ggplot2`?
 
