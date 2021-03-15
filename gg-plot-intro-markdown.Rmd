@@ -126,7 +126,8 @@ ggplot(data=AmesHousing) +
 28. Multiple shapes can be used as points. The [Data Visualization Cheat Sheet](https://www.rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf) lists several shape options
 
 29. `geom_smooth` adds a fitted line through the data.
-- `method=lm` specifies a linear regression line. method=loess creates a smooth fit curve
+- `method=lm` specifies a linear regression line. 
+- `method=loess` creates a smooth fit curve
 - `se=FALSE` removes the shaded confidence regions around each line
 - `fullrange=TRUE` extends all regression lines to the same length
 
@@ -261,6 +262,19 @@ ggplot(AmesHousing2, aes(x = Fireplace2, y = SalePrice, color = PavedDrive)) +
   coord_flip()+ 
   labs(title="Housing Prices in Ames, Iowa") +
   theme(plot.title = element_text(family = "Trebuchet MS", color = "blue", face="bold", size=12, hjust=0))
+```
+
+```{r}
+# Create a new data frame with only houses with less than 3 fireplaces
+AmesHousing2 <- filter(AmesHousing, Fireplaces < 3)
+
+# Create a new variable called Fireplace2
+AmesHousing2 <-mutate(AmesHousing2,Fireplace2=as.factor(Fireplaces))
+
+str(AmesHousing2)
+
+ggplot(data=AmesHousing2) +                 
+  geom_density(aes(SalePrice, color = Fireplace2,  fill = Fireplace2), alpha = 0.2)
 ```
 
 Add a comment indicating you’re answering question 3, beneath the comment answer the following:
