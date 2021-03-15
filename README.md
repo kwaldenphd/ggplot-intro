@@ -187,7 +187,8 @@ ggplot(data=AmesHousing) +
 28. Multiple shapes can be used as points. The [Data Visualization Cheat Sheet](https://www.rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf) lists several shape options
 
 29. `geom_smooth` adds a fitted line through the data.
-- `method=lm` specifies a linear regression line. method=loess creates a smooth fit curve
+- `method=lm` specifies a linear regression line. 
+- `method=loess` creates a smooth fit curve
 - `se=FALSE` removes the shaded confidence regions around each line
 - `fullrange=TRUE` extends all regression lines to the same length
 
@@ -325,11 +326,18 @@ ggplot(AmesHousing2, aes(x = Fireplace2, y = SalePrice, color = PavedDrive)) +
 ## Question 3
 
 ```R
+# box plot code
 ggplot(AmesHousing2, aes(x = Fireplace2, y = SalePrice, color = PavedDrive)) +
   geom_boxplot(position = position_dodge(width = 1)) +
   coord_flip()+ 
   labs(title="Housing Prices in Ames, Iowa") +
   theme(plot.title = element_text(family = "Trebuchet MS", color = "blue", face="bold", size=12, hjust=0))
+```
+
+```R
+#density plot code
+ggplot(data=AmesHousing2) +                 
+  geom_density(aes(SalePrice, color = Fireplace2,  fill = Fireplace2), alpha = 0.2)
 ```
 
 Add a comment indicating you’re answering question 3, beneath the comment answer the following:
@@ -357,8 +365,8 @@ Q2: Add a comment indicating you’re answering question 2, beneath the comment 
 - Include a regression line, a title, and labels for the x and y axes.
 - Modifies the scatterplot by replacing the regression line with a loess smoother
 - Colors the points by the overall condition of the home, `OverallCond`
-
 ```R
+# box plot code
 ggplot(AmesHousing2, aes(x = Fireplace2, y = SalePrice, color = PavedDrive)) +
   geom_boxplot(position = position_dodge(width = 1)) +
   coord_flip()+ 
@@ -366,6 +374,11 @@ ggplot(AmesHousing2, aes(x = Fireplace2, y = SalePrice, color = PavedDrive)) +
   theme(plot.title = element_text(family = "Trebuchet MS", color = "blue", face="bold", size=12, hjust=0))
 ```
 
+```R
+#density plot code
+ggplot(data=AmesHousing2) +                 
+  geom_density(aes(SalePrice, color = Fireplace2,  fill = Fireplace2), alpha = 0.2)
+```
 Q3: Add a comment indicating you’re answering question 3, beneath the comment answer the following:
 - In the density plot above, explain what the `color`, `fill`, and `alpha` commands are used for. 
   * Hint: try running the code with and without these commands or use the Data Visualization Cheat Sheet.
