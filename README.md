@@ -7,6 +7,8 @@ This tutorial is licensed under a <a href="http://creativecommons.org/licenses/b
 
 It is often necessary to create graphs to effectively communicate key patterns within a dataset. While many software packages allow the user to make basic plots, it can be challenging to create plots that are customized to address a specific idea. While there are numerous ways to create graphs, this tutorial will focus on the R package ggplot2, created by Hadley Wickham.
 
+[Link to lab overview video](https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=8625a1d6-973d-48e2-9264-acec001a739b) (Panopto, ND users).
+
 ## Acknowledgements
 
 This lab procedure is adapted from and based on Ryan Miller's ["Creating Graphs with ggplot2"](https://remiller1450.github.io/s230f19/ggplot.html) (Fall 2019, Intro to Data Science STA 230 course, Grinnell College).
